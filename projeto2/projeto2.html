@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 2 - Data Core</title>
+    <style>
+        /* Design System do Projeto 2 */
+        :root {
+            --primary: #00f2ff;
+            --bg: #050505;
+            --card: #111;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: white;
+            font-family: 'Monaco', 'Consolas', monospace;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            border: 1px solid var(--primary);
+            padding: 40px;
+            background: var(--card);
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
+            border-radius: 4px;
+            text-align: center;
+            max-width: 500px;
+            position: relative;
+        }
+
+        /* Efeito de Scanline (Linha de TV antiga) */
+        .container::before {
+            content: " ";
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+
+        h1 {
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-top: 0;
+        }
+
+        p {
+            color: #888;
+            line-height: 1.6;
+        }
+
+        .status {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 5px 15px;
+            border: 1px solid #333;
+            color: #00ff41; /* Verde Matrix */
+            font-size: 0.8rem;
+        }
+
+        .btn-back {
+            margin-top: 30px;
+            display: inline-block;
+            color: var(--primary);
+            text-decoration: none;
+            border: 1px solid var(--primary);
+            padding: 10px 20px;
+            transition: 0.3s;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        .btn-back:hover {
+            background: var(--primary);
+            color: black;
+            box-shadow: 0 0 15px var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="status">● SYSTEM_ONLINE</div>
+        <h1>Data Core</h1>
+        <p>Este é o <strong>Projeto 2</strong>. Uma interface simulada de acesso a dados encriptados com estética Cyberpunk.</p>
+        
+        <div style="margin-top: 20px; color: #444; font-size: 10px;">
+            ID_SESSION: 9928-XCA-001 <br>
+            ENCRYPTION: AES-256
+        </div>
+
+        <a href="/index.html" class="back-link">← Voltar ao Início</a>
+    </div>
+
+</body>
+</html>
